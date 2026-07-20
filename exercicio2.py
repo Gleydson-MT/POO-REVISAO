@@ -12,12 +12,20 @@ bola1 = Bola("Branca", 30, "Plastico")
 
 bola1.saudacao()
 
+class Calculadora:
+    def multiplicar(self, a, b):
+        return a*b
+calc = Calculadora()
 
 class Quadrado:
-    objeto = "Quadrado"
-    def __init__(self, tamanho_do_lado):
-        self.tamanho_do_lado = tamanho_do_lado
-
+    lados = 2
+    # objeto = "Quadrado"
+    # soma_de_lados = 0
+    def __init__(self, a,b):
+        self.a = a
+        self.b = b
     def saudacao(self):
-        print(f"O quadrado mede {self.tamanho_do_lado}, metros quadrados.")
-        pass
+        print(f"O quadrado mede {calc.multiplicar(self.a, self.b)} metros quadrados.")
+
+quadrado1 = Quadrado(10, 30)
+quadrado1.saudacao()

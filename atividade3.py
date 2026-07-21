@@ -8,6 +8,14 @@ class Cadastro:
     def __str__(self):
         return f"\n{self.nome}- CPF:{self.cpf}\nTelefone:{self.telefone}\nE-mail:{self.email}\n Registro realizado com sucesso!\n"
 
+
+cliente1 = Cadastro("Alisson", 123456789, 85998798969, "Alissooon@outlook.com")
+
+
+
+
+
+
 class Serviços:
     def __init__(self, nome, valor, duracao):
         self.nome = nome
@@ -15,37 +23,55 @@ class Serviços:
         self.duracao = duracao
         pass
 
-while True:
-    print("""  ======== SISTEMA DE CADASTRO ========
-          1. Cadastra Cliente
-          2. Cadastra Serviço
-          3. Agendar Atendimento
-          4. Listar Agendamentos
-          5. Cancelar Agendamento
-          0. Sair
-    """)
+class Agendamento:
+    def __init__(self, cliente, servico, data, horario):
+        self.cliente = cliente
+        self.servico = servico
+        self.data = data
+        self.horario = horario
+        pass
+
+class Lista_de_Agendamento:
+    def __init__(self, nome_do_cliente, servico, data, horario):
+        self.nome_do_cliente = nome_do_cliente
+        self.servico = servico
+        self.data = data
+        self.horario = horario
+        pass
 
     
-    
-    op = input("Digite a opção desejada: ")
 
-    if op == "1":
-        while True:
-            nome = input("Digite o nome do cliente: ")
-            if nome == "":
-                print("Preencha o campo acima")
-            else:
-                break
-        while True:
-            cpf = (input("Digite o CPF do cliente: "))
-            if cpf == "":
-                print("Preencha o campo acima para continuar.")
-            elif len(cpf) != 11:
-                print("""Quantidade de dígitos fora do padrão.""")
-            elif not cpf.isdigit():
-                print("Caracteres fora do padrão suportado.")
-            else:
-                break
-        telefone = int(input("Digite o telefone do cliente: "))
-        email = input("Informe o E-mail do cliente: ")
-        input("Digite qualquer tecla para continuar.")
+    # while True:
+    #     print("""  ======== SISTEMA DE CADASTRO ========
+    #         1. Cadastra Cliente
+    #         2. Cadastra Serviço
+    #         3. Agendar Atendimento
+    #         4. Listar Agendamentos
+    #         5. Cancelar Agendamento
+    #         0. Sair
+    #     """)
+
+        
+        
+    #     op = input("Digite a opção desejada: ")
+
+    #     if op == "1":
+    #         while True:
+    #             nome = input("Digite o nome do cliente: ")
+    #             if nome == "":
+    #                 print("Preencha o campo acima")
+    #             else:
+    #                 break
+    #         while True:
+    #             cpf = (input("Digite o CPF do cliente: "))
+    #             if cpf == "":
+    #                 print("Preencha o campo acima para continuar.")
+    #             elif len(cpf) != 11:
+    #                 print("""Quantidade de dígitos fora do padrão.""")
+    #             elif not cpf.isdigit():
+    #                 print("Caracteres fora do padrão suportado.")
+    #             else:
+    #                 break
+    #         telefone = int(input("Digite o telefone do cliente: "))
+    #         email = input("Informe o E-mail do cliente: ")
+    #         input("Digite qualquer tecla para continuar.")

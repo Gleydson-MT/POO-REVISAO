@@ -1,3 +1,15 @@
+class Calculadora:
+    def multiplicar(self, a, b):
+        return a*b
+    @staticmethod
+    def somar(a,b):
+        return a+b
+    @classmethod
+    def subtrair(cls,a,b):
+        return a-b
+calc = Calculadora()
+
+
 class Bola:
     objeto = "Bola"
     def __init__(self, cor, circunferencia, materia):
@@ -11,11 +23,6 @@ class Bola:
 bola1 = Bola("Branca", 30, "Plastico")
 
 bola1.saudacao()
-
-class Calculadora:
-    def multiplicar(self, a, b):
-        return a*b
-calc = Calculadora()
 
 class Quadrado:
     lados = 2
